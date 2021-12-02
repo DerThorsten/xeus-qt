@@ -103,13 +103,11 @@ endif ()
 
 set(XQ_HEADERS
     ${XQ_INCLUDE_DIR}/xq/xq.hpp
-    ${XQ_INCLUDE_DIR}/xq/xqServer.hpp
-    ${XQ_INCLUDE_DIR}/xq/xqQtPoller.hpp
+    ${XQ_INCLUDE_DIR}/xq/xserver_qt.hpp
     )
 
 set(XQ_SOURCES
-    ${XQ_SOURCE_DIR}/xqServer.cpp
-    ${XQ_SOURCE_DIR}/xqQtPoller.cpp
+    ${XQ_SOURCE_DIR}/xserver_qt.cpp
    )
 
 # Targets and link
@@ -277,6 +275,10 @@ if (XQ_BUILD_STATIC_LIBS)
 
     list(APPEND xq_targets xq-static)
 endif ()
+
+
+# example
+add_subdirectory(example)
 
 # Installation
 # ============
